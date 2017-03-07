@@ -1,0 +1,16 @@
+Point rejected: (r_r, -1, -20)
+Point rejected: (rec, 7, -8)
+Duplicate points:
+SkipList dump:
+Node has depth 1, Value (null)
+SkipList size is: 0
+QuadTree dump:
+Node at 0, 0, 1024: Empty
+1 quadtree nodes printed
+Point not found: r_r
+Point not removed: r_r
+Point rejected: (1, -1)
+Point not found: (1, 1)
+Points intersecting region (-5, -5, 20, 20):
+1 quadtree nodes visited
+Rectangle rejected: (5, 5, 4, -2)
