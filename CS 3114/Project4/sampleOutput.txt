@@ -1,0 +1,20 @@
+Rectangle inserted: (rectA, 1, 0, 2, 4)
+Rectangle inserted: (b, 2, 0, 4, 8)
+Rectangle inserted: (rectC, 4, 0, 9, 6)
+SkipList dump:
+Node has depth: 2, Value (null)
+Node has depth: 2, Value (rectA, 1, 0, 2, 4)
+Node has depth: 1, Value (b, 2, 0, 4, 8)
+Node has depth: 2, Value (rectC, 4, 0, 9, 6)
+Freelist Blocks
+(0, 75)
+(1001, 23)
+Rectangle removed: (b, 2, 0, 4, 8)
+SkipList dump:
+Node has depth: 2, Value (null)
+Node has depth: 2, Value (rectA, 1, 0, 2, 4)
+Node has depth: 2, Value (rectC, 4, 0, 9, 6)
+Freelist Blocks:
+(0, 75)
+(439, 277)
+(1001, 23)

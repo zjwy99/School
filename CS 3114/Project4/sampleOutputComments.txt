@@ -1,0 +1,59 @@
+// Assume that the buffer size is 512 bytes.
+// More space is always allocated in blocks of 512 bytes.
+// Initially, there is 1 block in the file, which stores
+// the head node with an array containing 1 forward pointer  
+// (which is the only thing present in an empty SkipList)
+// After serialization, it is 73 bytes long.
+// We have to add 2 more bytes to store this length information,
+// for a total of 75 bytes. After inserting this entire record,
+// we are left with 512 - 75 = 437 free bytes.
+
+
+Rectangle inserted: (rectA, 1, 0, 2, 4)         // The KVPair containing this rectangle requires 188 bytes after serialization Again, we have to include 2 
+						                        // bytes to store the length of this message, for a total of 190 bytes for this entire message. Insert it.
+                                                // You are left with 437 - 190 = 247 bytes.
+                                                // Assume that the SkipNode got a depth of 2. It contains an array with 2 forward pointers, and a separate
+                                                // pointer that points to the KVPair we just inserted. All pointers are 4-byte int values indicating byte positions. 
+                                                // SkipNode object takes up 95 bytes after serialization, including the 2-byte quantity containing the length of the message. 
+						                        // After inserting it, we have 247 - 95 = 152 free bytes.
+                                                
+                                                // Inserting this rectangle increased the level of the SkipList, which means we need to remove the head node
+                                                // and re-allocate it with more space for forward pointers. The new head node with 2 pointers requires a total of 79 bytes
+                                                // after serialization. We insert it at the end of the file, and we are left with 152 - 79 = 73 free bytes.
+                                                
+Rectangle inserted: (b, 2, 0, 4, 8)             // This KVPair will require 184 + 2 = 186 bytes after serialization, including 2 bytes to store the message length. 
+						                        // So we need to increase the size of the file by 1 block (512 bytes).
+                                                //  We now have 73 + 512 = 585 free bytes at the end of the file. Inserting the KVPair leaves us with
+                                                // 585 - 186 = 399 free bytes. Next, we insert the SkipNode (depth: 1) with one forward pointer 
+                                                // and pointer to the KVPair. This will require 89 + 2 = 91 bytes after serialization. We are left with 399 - 91 = 308 free bytes.
+
+Rectangle inserted: (rectC, 4, 0, 9, 6)         // This KVPair will require 188 + 2 = 190 bytes after serialization, including the 2-byte length quantity. 
+						                        // This leaves us with 308 - 190 = 118 free bytes. The corresponding SkipNode (depth: 2)
+                                                // will require a total 93 + 2 = 95 bytes after serialization. This leaves us with 118 - 95 = 23 free bytes at the end of the file.
+                                                
+                                                // This results in the dump you see next.
+                                                
+SkipList dump:
+Node has depth: 2, Value (null)                 // Occupies: Bytes 360 to 438 (inclusive)       [79 bytes]
+Node has depth: 2, Value (rectA, 1, 0, 2, 4)    // Occupies: Bytes 75 to 359 (inclusive)        [190 + 95 bytes]
+Node has depth: 1, Value (b, 2, 0, 4, 8)        // Occupies: Bytes 439 to 715 (inclusive)       [186 + 91 bytes]
+Node has depth: 2, Value (rectC, 4, 0, 9, 6)    // Occupies: Bytes 716 to 1000 (inclusive)      [190 + 95 bytes]
+Freelist Blocks
+(0, 75)                                         // Free space: Bytes 0 to 74 (inclusive)        [75 bytes] [This is where the header was before we moved it.]
+(1001, 23)                                      // Free space: Bytes 1001 to 1023 (inclusive)   [23 byte]
+                                                
+Rectangle removed: (b, 2, 0, 4, 8)              // We're now removing a record (consisting of a KVPair and SkipNode) that occupied 277 bytes for rectangle data, pointers, and 
+						                        // the length of each message.
+
+SkipList dump:
+Node has depth: 2, Value (null)                 // Occupies: Bytes 360 to 438 (inclusive)       [79 bytes]
+Node has depth: 2, Value (rectA, 1, 0, 2, 4)    // Occupies: Bytes 75 to 359 (inclusive)        [190 + 95 bytes]
+Node has depth: 2, Value (rectC, 4, 0, 9, 6)    // Occupies: Bytes 716 to 1000 (inclusive)      [190 + 95 bytes]
+
+                                                // The bytes that used to be occupied by Rectangle b are now free,
+                                                // resulting in a free block starting at byte 439 (inclusive), with
+                                                // 277 free bytes.
+Freelist Blocks:
+(0, 74)                                         // Free space: Bytes 0 to 91 (inclusive)        [75 bytes]
+(439, 277)                                      // Free space: Bytes 439 to 715 (inclusive)     [277 bytes]
+(1001, 23)                                      // Free space: Bytes 1001 to 1023 (inclusive)   [23 bytes]
