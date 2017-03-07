@@ -1,6 +1,10 @@
 Game Title: Super Soldier Adventures 
+
 Genre: Platformer, Shooter, Adventures 
+
 Team Member: Zachary Yee
+
+
 Description: Player will control a character who can run and jump across various obstacles. 
 There will also be enemies to hinder the player's progress.  
 The player will also have a weapon which the player can use to shoot enemies. 
