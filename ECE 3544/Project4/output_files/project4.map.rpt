@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project4
-Fri Apr 21 05:34:51 2017
+Fri Apr 21 10:20:07 2017
 Quartus II 64-Bit Version 14.1.1 Build 190 01/19/2015 SJ Web Edition
 
 
@@ -54,7 +54,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr 21 05:34:51 2017      ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr 21 10:20:07 2017      ;
 ; Quartus II 64-Bit Version       ; 14.1.1 Build 190 01/19/2015 SJ Web Edition ;
 ; Revision Name                   ; project4                                   ;
 ; Top-level Entity Name           ; project4                                   ;
@@ -173,19 +173,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; one_second_delay.v               ; yes             ; User Verilog HDL File  ; C:/Users/Zachary/Documents/School/ECE 3544/Project 4 Spring 2017/project4_restored/one_second_delay.v       ;         ;
-; LED_handler.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Zachary/Documents/School/ECE 3544/Project 4 Spring 2017/project4_restored/LED_handler.v            ;         ;
-; decoder_2_to_4.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Zachary/Documents/School/ECE 3544/Project 4 Spring 2017/project4_restored/decoder_2_to_4.v         ;         ;
-; eight_bit_counter.v              ; yes             ; User Verilog HDL File  ; C:/Users/Zachary/Documents/School/ECE 3544/Project 4 Spring 2017/project4_restored/eight_bit_counter.v      ;         ;
-; sevensegdecoder_assign.v         ; yes             ; User Verilog HDL File  ; C:/Users/Zachary/Documents/School/ECE 3544/Project 4 Spring 2017/project4_restored/sevensegdecoder_assign.v ;         ;
-; buttonpressed.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Zachary/Documents/School/ECE 3544/Project 4 Spring 2017/project4_restored/buttonpressed.v          ;         ;
-; project4.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Zachary/Documents/School/ECE 3544/Project 4 Spring 2017/project4_restored/project4.v               ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
+; one_second_delay.v               ; yes             ; User Verilog HDL File  ; C:/Users/Zach-Laptop/Documents/School/School/ECE 3544/Project4/one_second_delay.v       ;         ;
+; LED_handler.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Zach-Laptop/Documents/School/School/ECE 3544/Project4/LED_handler.v            ;         ;
+; decoder_2_to_4.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Zach-Laptop/Documents/School/School/ECE 3544/Project4/decoder_2_to_4.v         ;         ;
+; eight_bit_counter.v              ; yes             ; User Verilog HDL File  ; C:/Users/Zach-Laptop/Documents/School/School/ECE 3544/Project4/eight_bit_counter.v      ;         ;
+; sevensegdecoder_assign.v         ; yes             ; User Verilog HDL File  ; C:/Users/Zach-Laptop/Documents/School/School/ECE 3544/Project4/sevensegdecoder_assign.v ;         ;
+; buttonpressed.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Zach-Laptop/Documents/School/School/ECE 3544/Project4/buttonpressed.v          ;         ;
+; project4.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Zach-Laptop/Documents/School/School/ECE 3544/Project4/project4.v               ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -417,7 +417,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.1.1 Build 190 01/19/2015 SJ Web Edition
-    Info: Processing started: Fri Apr 21 05:34:38 2017
+    Info: Processing started: Fri Apr 21 10:19:52 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file test.v
@@ -464,9 +464,9 @@ Info (21057): Implemented 167 device resources after synthesis - the final resou
     Info (21059): Implemented 50 output pins
     Info (21061): Implemented 111 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 664 megabytes
-    Info: Processing ended: Fri Apr 21 05:34:51 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 667 megabytes
+    Info: Processing ended: Fri Apr 21 10:20:07 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:33
 
 
