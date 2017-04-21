@@ -1,0 +1,6 @@
+
+State Machine - |project4|buttonpressed:U1|state
+Name state.BUTTON_FREE state.BUTTON_RELEASED state.BUTTON_PRESSED 
+state.BUTTON_FREE 0 0 0 
+state.BUTTON_PRESSED 1 0 1 
+state.BUTTON_RELEASED 1 1 0 

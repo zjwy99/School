@@ -1,14 +1,23 @@
-module test(clock, enable, customer_hex, out);
-	input clock, enable;
-	input [23:0] customer_hex;
-	output reg out;
+module test(clock, reset, machine_hex, customer_hex, load_machine, load_value_machine, load_customer, load_value_customer,
+	product_out, quarter_out, dime_out, nickel_out);
+
+	input clock, reset;
+	input [23:0] machine_hex, customer_hex;
 	
-	reg[7:0] quarters, dimes, nickels;
+	output load_machine, load_customer, product_out, quarter_out, dime_out, nickel_out;
+	output [23:0] load_value_machine, load_value_customer;
 	
-	always @ (customer_hex) begin
-		quarters <= customer_hex[23:16];
-		dimes <= customer_hex[15:8];
-		nickels <= customer_hex[7:0];
-	end 
+	reg state, next_state;
+	parameter [1:0]	INIT = 2'b00,
+							COIN = 2'b01,
+							DISPENSE = 2'b10;
+								
+								
+	always @ (posedge clock or negedge reset)
+		if (~reset)
+			state <= INIT;
+		else	
+			state <= next_state;
+	
 	
 endmodule

@@ -58,13 +58,14 @@ module project4(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LED);
 	and CUSTOMER_ENABLE1(customer_counter_enable[3], SW[2], coin_enable[3]);
 	and CUSTOMER_ENABLE2(customer_counter_enable[2], SW[2], coin_enable[2]);
 	and CUSTOMER_ENABLE3(customer_counter_enable[1], SW[2], coin_enable[1]);
-	eight_bit_counter QUARTER_COUNTER(.clock(CLOCK_50), .clr_l(KEY[0]), .ld_l(1'b1), .enp(customer_counter_enable[3]), .ent(1'b1), .ins(8'b00000000), .state(customer_hexDigits[23:16]));
-	eight_bit_counter DIME_COUNTER(.clock(CLOCK_50), .clr_l(KEY[0]), .ld_l(1'b1), .enp(customer_counter_enable[2]), .ent(1'b1), .ins(8'b00000000), .state(customer_hexDigits[15:8]));
-	eight_bit_counter NICKEL_COUNTER(.clock(CLOCK_50), .clr_l(KEY[0]), .ld_l(1'b1), .enp(customer_counter_enable[1]), .ent(1'b1), .ins(8'b00000000), .state(customer_hexDigits[7:0]));
+	
+	eight_bit_counter QUARTER_COUNTER_CUSTOMER(.clock(CLOCK_50), .clr_l(KEY[0]), .ld_l(1'b1), .enp(customer_counter_enable[3]), .ent(1'b1), .ins(8'b00000000), .state(customer_hexDigits[23:16]));
+	eight_bit_counter DIME_COUNTER_CUSTOMER(.clock(CLOCK_50), .clr_l(KEY[0]), .ld_l(1'b1), .enp(customer_counter_enable[2]), .ent(1'b1), .ins(8'b00000000), .state(customer_hexDigits[15:8]));
+	eight_bit_counter NICKEL_COUNTER_CUSTOMER(.clock(CLOCK_50), .clr_l(KEY[0]), .ld_l(1'b1), .enp(customer_counter_enable[1]), .ent(1'b1), .ins(8'b00000000), .state(customer_hexDigits[7:0]));
 
 	
 	
-	one_second_delay DELAY(.clock(CLOCK_50), .enable(delay_in), .out(delay_out));
+	one_second_delay DELAY(.clock(CLOCK_50), .enable(enable), .out(delay_out));
 //	operation_fsm VENDING(.clock(CLOCK_50), .reset(KEY[0]), .enable(enable), 
 //		.quarter_count(customer_hexDigits[23:16]), .dime_count(customer_hexDigits[15:8]), 
 //		.nickel_count(customer_hexDigits[7:0]), .delay(delay_out), .product_out(delay_enable[3]), 
@@ -80,7 +81,7 @@ module project4(CLOCK_50, KEY, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LED);
 	sevensegdecoder_assign N1(.digit(hexDigits[7:4]), .hex_driver(HEX1));
 	sevensegdecoder_assign N2(.digit(hexDigits[3:0]), .hex_driver(HEX0));
 	
-	//LED_handler handler(.dime_count(hexDigits[15:8]), .nickel_count(hexDigits[7:0]), .product(delay_out), .dime(delay_out), .nickel(delay_out), .out(LED[3:0]));
+	LED_handler handler(.dime_count(hexDigits[15:8]), .nickel_count(hexDigits[7:0]), .product(delay_out), .dime(delay_out), .nickel(delay_out), .out(LED[3:0]));
 	
 // 
 
