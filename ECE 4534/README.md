@@ -38,3 +38,6 @@ MAX32 pins, Stepper Signal, PIC32 Pin
 	71 -> B -> 38 (RA1)
 	72 -> C -> 60 (RA4)
 	73 -> D -> 61 (RA5)
+	
+## Video
+https://www.youtube.com/watch?v=FWUNKh9QDMU
