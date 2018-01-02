@@ -18,11 +18,6 @@ This project consists of two parts, the mapping phase and the hide and seek phas
  
  __Note: when you add new files, make sure to add them to the actual source directory and then simlink them into the MPLABx dir
  - `ln -sr <source-dir>/<name> <mplabx-source-dir>/<name>`
- 
-
-## Examples
-### led\_test
- This is a sample mplab project that blinks and LED. It is meant to show how to use harmony and MPLABx at a basic level.
 
 ## Python Modules needed:
  1. numpy
