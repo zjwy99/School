@@ -1,4 +1,8 @@
 # Hide and Seek
+
+##Project Description
+This project consists of two parts, the mapping phase and the hide and seek phase. The first phase, the mapping phase, has one rover move around a room and gather data using a sensor to generate a map. After the mapping is complete, two rovers will play a game of hide and seek. During this phase, one rover will hide using the map data and the other rover will attempt to find the hiding rover using sensor as well. 
+
 ## Project Setup
  1. Clone Repo
  2. Create an MPLABx Harmony Project (set board to MX795..512L)
