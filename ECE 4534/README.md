@@ -1,6 +1,13 @@
 # Hide and Seek
 
-##Project Description
+## Team Members
+Zachary Yee - Mapping Rover
+
+Puvanai Avakul - Hide and Seek Rovers
+
+Steven Frederiksen - Communication between rovers and servers
+
+## Project Description
 This project consists of two parts, the mapping phase and the hide and seek phase. The first phase, the mapping phase, has one rover move around a room and gather data using a sensor to generate a map. After the mapping is complete, two rovers will play a game of hide and seek. During this phase, one rover will hide using the map data and the other rover will attempt to find the hiding rover using sensor as well. 
 
 ## Project Setup
@@ -18,11 +25,6 @@ This project consists of two parts, the mapping phase and the hide and seek phas
  
  __Note: when you add new files, make sure to add them to the actual source directory and then simlink them into the MPLABx dir
  - `ln -sr <source-dir>/<name> <mplabx-source-dir>/<name>`
- 
-
-## Examples
-### led\_test
- This is a sample mplab project that blinks and LED. It is meant to show how to use harmony and MPLABx at a basic level.
 
 ## Python Modules needed:
  1. numpy
@@ -36,3 +38,6 @@ MAX32 pins, Stepper Signal, PIC32 Pin
 	71 -> B -> 38 (RA1)
 	72 -> C -> 60 (RA4)
 	73 -> D -> 61 (RA5)
+	
+## Video
+https://www.youtube.com/watch?v=FWUNKh9QDMU
