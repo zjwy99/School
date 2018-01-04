@@ -1,9 +1,0 @@
-insert a 0 0
-insert b 200 0
-insert c 0 200
-insert d 200 200
-insert a 0 0
-insert b 200 0
-insert c 0 200
-insert d 200 200
-duplicates

@@ -1,6 +1,0 @@
-insert rectA 1 0 2 4
-insert b 2 0 4 8
-insert rectC 4 0 9 6
-search b
-intersections
-regionsearch 1 1 1 1

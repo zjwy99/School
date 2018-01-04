@@ -1,0 +1,11 @@
+insert a 10 10 15 15     
+insert b 11 11 5 5
+insert c 0 0 1000 10  
+insert d 0 0 10 1000   
+insert a 10 10 15 15    
+insert b 11 11 5 5  
+insert a 0 0 1000 10    
+insert b 0 0 910 10    
+regionsearch 900 5 15 15    
+regionsearch 9 900 5 500 
+intersections  

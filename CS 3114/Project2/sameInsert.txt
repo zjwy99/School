@@ -1,6 +1,0 @@
-insert a 500 500
-insert b 500 500
-insert c 500 500
-insert d 500 500
-insert e 500 500
-dump

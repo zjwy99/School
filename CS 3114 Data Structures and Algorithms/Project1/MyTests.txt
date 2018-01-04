@@ -1,0 +1,42 @@
+insert a 10 10 15 15
+insert b 11 11 5 5
+insert c 0 0 1000 10
+insert d 0 0 10 1000
+remove a
+remove 11 11 5 5
+remove f
+remove 1 1 1 1
+remove 1000000 1 1 1
+remove 1 100000 1 1
+insert a 1 1 1 1000000
+search a
+search c
+insert z 0 0 1025 1025
+insert a 10 10 15 15
+insert b 11 11 5 5
+remove 10 10 15 10
+remove 10 10 10 15
+remove 10 15 15 15
+dump
+intersections
+insert a 0 0 1000 10
+insert b 0 0 910 10
+regionsearch 900 5 15 15 
+regionsearch 900 5 0 5
+regionsearch 900 5 5 0
+dump
+regionsearch 9 900 5 500
+regionsearch 9 -900 5 500
+regionsearch -900 9 500 5
+remove a
+remove a
+remove b
+remove b
+remove c
+remove d
+insert a 1 1 1 1
+insert b 1 1 1 1
+insert c 1 1 1 1
+insert d 1 1 1 1 
+remove 1 1 1 1 
+dump

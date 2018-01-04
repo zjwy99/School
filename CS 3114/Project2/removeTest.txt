@@ -1,6 +1,0 @@
-insert a 1 20
-insert b 10 30
-insert c 1 20  
-insert d 200 200
-remove 200 200
-dump
